@@ -1,0 +1,17 @@
+Time: 0s
+Parent: forks → creates child 48002
+Parent: prints "My child is called 48002" 
+Parent: goes to sleep for 10 seconds
+
+Time: ~0.1s  
+Child: prints "I'm the child 48002"
+Child: prints "PID48002 says goodbye"
+Child: EXITS → becomes ZOMBIE
+
+Time: 0s-10s (Your ps command runs here)
+Parent: Sleeping (state S)
+Child: Zombie (state Z, shows as <defunct>)
+
+Time: 10s
+Parent: wakes up, prints "PID48001 says goodbye"
+Parent: exits → zombie child gets reaped

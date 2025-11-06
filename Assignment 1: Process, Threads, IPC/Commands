@@ -1,0 +1,10 @@
+
+gcc example.c -o example
+./example
+./example &
+
+ps -o pid,ppid,state,cmd -C Task7 
+ps -ef | grep example
+
+make
+make run
