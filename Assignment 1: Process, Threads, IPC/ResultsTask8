@@ -1,62 +1,50 @@
-…nt 1: Process, Threads, IPC (main)  
-make run
 Running tests...
-Parent process PID: 46474
+Parent process PID: 60782
 Creating 2 child processes...
-[Child 1 - PID 46475] Sum = 26.042295, Time = 0.018 ms
-[Child 2 - PID 46476] Sum = 28.008094, Time = 0.013 ms
+[Child 1 - PID 60783] Sum = 27.292304, Time = 0.005 ms
+[Child 2 - PID 60784] Sum = 26.552917, Time = 0.005 ms
 
 --- Summary ---
 Number of child processes: 2
-Total sum of array (N=100): 54.050389
-Total execution time: 1.401 ms
+Total sum of array (N=100): 53.845221
+Total execution time: 0.426 ms
 
-Parent process PID: 46477
+Parent process PID: 60785
 Creating 2 child processes...
-[Child 1 - PID 46478] Sum = 253.730063, Time = 0.018 ms
-[Child 2 - PID 46479] Sum = 246.196612, Time = 0.017 ms
+[Child 1 - PID 60786] Sum = 245.308110, Time = 0.005 ms
+[Child 2 - PID 60787] Sum = 244.152974, Time = 0.005 ms
 
 --- Summary ---
 Number of child processes: 2
-Total sum of array (N=1000): 499.926675
-Total execution time: 1.407 ms
+Total sum of array (N=1000): 489.461084
+Total execution time: 0.379 ms
 
-Parent process PID: 46480
+Parent process PID: 60788
 Creating 2 child processes...
-[Child 1 - PID 46481] Sum = 2490.296733, Time = 0.047 ms
-[Child 2 - PID 46482] Sum = 2498.583118, Time = 0.047 ms
+[Child 1 - PID 60789] Sum = 2481.108701, Time = 0.016 ms
+[Child 2 - PID 60790] Sum = 2474.888572, Time = 0.016 ms
 
 --- Summary ---
 Number of child processes: 2
-Total sum of array (N=10000): 4988.879851
-Total execution time: 1.288 ms
+Total sum of array (N=10000): 4955.997273
+Total execution time: 0.404 ms
 
-Parent process PID: 46483
+Parent process PID: 60791
 Creating 2 child processes...
-[Child 1 - PID 46484] Sum = 25016.994874, Time = 0.283 ms
-[Child 2 - PID 46485] Sum = 25163.939428, Time = 0.248 ms
+[Child 1 - PID 60792] Sum = 24855.001924, Time = 0.127 ms
+[Child 2 - PID 60793] Sum = 24943.297505, Time = 0.125 ms
 
 --- Summary ---
 Number of child processes: 2
-Total sum of array (N=100000): 50180.934302
-Total execution time: 1.531 ms
+Total sum of array (N=100000): 49798.299429
+Total execution time: 0.776 ms
 
-Parent process PID: 46486
+Parent process PID: 60794
 Creating 2 child processes...
-[Child 1 - PID 46487] Sum = 250420.391774, Time = 1.006 ms
-[Child 2 - PID 46488] Sum = 249510.586501, Time = 1.028 ms
+[Child 1 - PID 60795] Sum = 249434.394249, Time = 1.099 ms
+[Child 2 - PID 60796] Sum = 250061.673483, Time = 1.082 ms
 
 --- Summary ---
 Number of child processes: 2
-Total sum of array (N=1000000): 499930.978275
-Total execution time: 2.160 ms
-
-
-Observations:
-Parent total time is roughly constant around 1–2 ms, showing the main overhead comes from process creation (fork() and pipe() setup).
-
-As N increases, child computation times scale linearly — but remain small because summation is simple and CPU caching helps.
-
-The children finish faster than total parent time, because the parent also waits (wait()) and synchronizes with both pipes.
-
-Big overhead can be observed
+Total sum of array (N=1000000): 499496.067732
+Total execution time: 2.249 ms

@@ -11,13 +11,13 @@ double rand_in_range() {
 }
 
 int main(int argc, char *argv[]) {
-    // Check if user provided the correct number of arguments
     if (argc != 2) {
         fprintf(stderr, "Usage: %s <N>\n", argv[0]);
+        fprintf(stderr, "Where N is the size of the array\n");
         return 1;
     }
 
-    // Convert command-line argument to integer (array size)
+    // Convert argument to integer
     int N = atoi(argv[1]);
     if (N <= 0) {
         fprintf(stderr, "N must be positive.\n");
@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
         array[i] = rand_in_range();
     }
 
-    // Create two pipes for inter-process communication
+    // Two pipes for inter-process communication
     // pipe1 for first child, pipe2 for second child
     int pipe1[2], pipe2[2];
     if (pipe(pipe1) == -1 || pipe(pipe2) == -1) {
@@ -64,10 +64,10 @@ int main(int argc, char *argv[]) {
 
     if (pid1 == 0) {
         // ---------- CHILD 1 ----------
-        // Responsible for summing the first half of the array
+        // Summing the first half of the array
 
         struct timeval cstart, cend;
-        gettimeofday(&cstart, NULL);  // Record child start time
+        gettimeofday(&cstart, NULL); 
 
         close(pipe1[0]);  // Close unused read end of pipe
 
@@ -81,20 +81,18 @@ int main(int argc, char *argv[]) {
         double child_time = (cend.tv_sec - cstart.tv_sec) * 1000.0;
         child_time += (cend.tv_usec - cstart.tv_usec) / 1000.0;
 
-        // Print results for child 1
         printf("[Child 1 - PID %d] Sum = %.6f, Time = %.3f ms\n", getpid(), sum1, child_time);
 
         // Send the result back to the parent through the pipe
         if (write(pipe1[1], &sum1, sizeof(double)) < 0)
             perror("write error in child 1");
 
-        // Cleanup before exit
         close(pipe1[1]);
         free(array);
         exit(0);
     }
 
-    // ======== CHILD 2 CREATION ========
+
     pid_t pid2 = fork();
     if (pid2 < 0) {
         perror("fork failed");
@@ -104,24 +102,22 @@ int main(int argc, char *argv[]) {
 
     if (pid2 == 0) {
         // ---------- CHILD 2 ----------
-        // Responsible for summing the second half of the array
+        // Summing the second half of the array
 
         struct timeval cstart, cend;
-        gettimeofday(&cstart, NULL);  // Record child start time
+        gettimeofday(&cstart, NULL); 
 
-        close(pipe2[0]);  // Close unused read end of pipe
+        close(pipe2[0]); 
 
         double sum2 = 0;
         for (int i = N / 2; i < N; i++) {
             sum2 += array[i];
         }
 
-        // Record child end time
         gettimeofday(&cend, NULL);
         double child_time = (cend.tv_sec - cstart.tv_sec) * 1000.0;
         child_time += (cend.tv_usec - cstart.tv_usec) / 1000.0;
 
-        // Print results for child 2
         printf("[Child 2 - PID %d] Sum = %.6f, Time = %.3f ms\n", getpid(), sum2, child_time);
 
         // Send result back to parent
@@ -133,6 +129,7 @@ int main(int argc, char *argv[]) {
         free(array);
         exit(0);
     }
+
 
     // ======== PARENT PROCESS ========
     // The parent now reads both results and combines them
@@ -164,7 +161,6 @@ int main(int argc, char *argv[]) {
     double elapsed = (end.tv_sec - start.tv_sec) * 1000.0;
     elapsed += (end.tv_usec - start.tv_usec) / 1000.0;
 
-    // Print overall summary
     printf("\n--- Summary ---\n");
     printf("Number of child processes: 2\n");
     printf("Total sum of array (N=%d): %.6f\n", N, total_sum);
