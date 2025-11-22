@@ -1,0 +1,21 @@
+CC = gcc
+CFLAGS = -Wall -pthread -O2
+TARGET = multi_threaded_histogram
+SRC = multi_threaded_histogram.c
+
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+
+clean:
+	rm -f $(TARGET)
+
+run1:
+	./$(TARGET) 3 10000
+
+run2:
+	./$(TARGET) 3 100000
+
+run3:
+	./$(TARGET) 3 1000000

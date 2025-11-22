@@ -1,4 +1,6 @@
 
+Replace the example with the files name.
+
 gcc example.c -o example
 ./example
 ./example &

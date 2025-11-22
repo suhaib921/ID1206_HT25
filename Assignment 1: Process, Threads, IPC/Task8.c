@@ -129,7 +129,7 @@ int main(int argc, char *argv[]) {
         free(array);
         exit(0);
     }
-
+    
 
     // ======== PARENT PROCESS ========
     // The parent now reads both results and combines them

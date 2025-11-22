@@ -1,0 +1,52 @@
+./pthread_sum 4
+Serial Sum = 499961.656250, time = 0.003179 
+Thread 0 sum = 125178.546875 (indices 0 to 249999)
+Thread 1 sum = 124831.992188 (indices 250000 to 499999)
+Thread 2 sum = 124893.875000 (indices 500000 to 749999)
+Thread 3 sum = 125058.484375 (indices 750000 to 999999)
+Parallel Sum = 499962.898438, time = 0.001233 
+./pthread_sum 8
+Serial Sum = 500143.843750, time = 0.003494 
+Thread 1 sum = 62520.113281 (indices 125000 to 249999)
+Thread 0 sum = 62304.359375 (indices 0 to 124999)
+Thread 2 sum = 62568.187500 (indices 250000 to 374999)
+Thread 4 sum = 62479.062500 (indices 500000 to 624999)
+Thread 3 sum = 62511.296875 (indices 375000 to 499999)
+Thread 6 sum = 62567.191406 (indices 750000 to 874999)
+Thread 5 sum = 62518.347656 (indices 625000 to 749999)
+Thread 7 sum = 62679.656250 (indices 875000 to 999999)
+Parallel Sum = 500148.214844, time = 0.001489 
+./pthread_sum 12
+Serial Sum = 499497.906250, time = 0.003405 
+Thread 0 sum = 41635.863281 (indices 0 to 83333)
+Thread 1 sum = 41632.101562 (indices 83334 to 166666)
+Thread 3 sum = 41750.785156 (indices 250000 to 333332)
+Thread 2 sum = 41608.437500 (indices 166667 to 249999)
+Thread 4 sum = 41596.480469 (indices 333333 to 416664)
+Thread 5 sum = 41606.183594 (indices 416665 to 499997)
+Thread 6 sum = 41564.218750 (indices 499998 to 583330)
+Thread 7 sum = 41663.054688 (indices 583331 to 666663)
+Thread 8 sum = 41633.816406 (indices 666664 to 749996)
+Thread 10 sum = 41533.855469 (indices 833330 to 916662)
+Thread 9 sum = 41619.109375 (indices 749997 to 833329)
+Thread 11 sum = 41660.511719 (indices 916663 to 999995)
+Parallel Sum = 499504.417969, time = 0.001247 
+./pthread_sum 16
+Serial Sum = 499854.500000, time = 0.003310 
+Thread 0 sum = 31170.708984 (indices 0 to 62499)
+Thread 2 sum = 31213.886719 (indices 125000 to 187499)
+Thread 1 sum = 31326.517578 (indices 62500 to 124999)
+Thread 3 sum = 31253.632812 (indices 187500 to 249999)
+Thread 4 sum = 31157.500000 (indices 250000 to 312499)
+Thread 5 sum = 31165.312500 (indices 312500 to 374999)
+Thread 6 sum = 31219.128906 (indices 375000 to 437499)
+Thread 7 sum = 31327.359375 (indices 437500 to 499999)
+Thread 8 sum = 31263.943359 (indices 500000 to 562499)
+Thread 9 sum = 31190.294922 (indices 562500 to 624999)
+Thread 10 sum = 31269.472656 (indices 625000 to 687499)
+Thread 11 sum = 31304.974609 (indices 687500 to 749999)
+Thread 13 sum = 31146.570312 (indices 812500 to 874999)
+Thread 12 sum = 31164.933594 (indices 750000 to 812499)
+Thread 15 sum = 31370.970703 (indices 937500 to 999999)
+Thread 14 sum = 31301.244141 (indices 875000 to 937499)
+Parallel Sum = 499846.451172, time = 0.001354 

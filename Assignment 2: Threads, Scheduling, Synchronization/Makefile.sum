@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -Wall -pthread
+TARGET = pthread_sum
+
+all: $(TARGET)
+
+$(TARGET): pthread_sum.c
+	$(CC) $(CFLAGS) -o $(TARGET) pthread_sum.c
+
+clean:
+	rm -f $(TARGET)
+
+run: $(TARGET)
+	./$(TARGET) 4

@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -Wall -pthread
+TARGET = pthread_stack
+
+all: $(TARGET)
+
+$(TARGET): pthread_stack.c
+	$(CC) $(CFLAGS) -o $(TARGET) pthread_stack.c
+
+clean:
+	rm -f $(TARGET)
+
+run: $(TARGET)
+	./$(TARGET) 4

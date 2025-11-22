@@ -1,0 +1,1090 @@
+suhkth@muhummed ~/D/I/Assignment 2: Threads, Scheduling, Synchronization (main)> ./pthread_stack 1
+Number of threads: 1
+Starting Mutex version
+Thread 0 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Mutex: Remaining nodes 
+Mutex: Remaining nodes in stack:
+Node ID: 2
+
+Total remaining nodes: 1
+Starting CAS version
+Thread 0 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+CAS: Remaining nodes 
+CAS: Remaining nodes in stack:
+Node ID: 2
+
+Total remaining nodes: 1
+###############################################################
+
+suhkth@muhummed ~/D/I/Assignment 2: Threads, Scheduling, Synchronization (main)> ./pthread_stack 2
+Number of threads: 2
+Starting Mutex version
+Thread 0 starting
+Thread 1 starting
+Pushed node 0
+Pushed node 1
+Pushed node 2
+Pushed node 3
+Popped node 3
+Popped node 1
+Pushed node 4
+Thread 1: exit
+Popped node 2
+Popped node 4
+Pushed node 5
+Thread 0: exit
+Mutex: Remaining nodes 
+Mutex: Remaining nodes in stack:
+Node ID: 5
+ -> Node ID: 0
+
+Total remaining nodes: 2
+Starting CAS version
+Thread 0 starting
+Thread 1 starting
+Pushed node 1
+Pushed node 2
+Popped node 2
+Popped node 1
+Pushed node 3
+Thread 1: exit
+Pushed node 0
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 0: exit
+CAS: Remaining nodes 
+CAS: Remaining nodes in stack:
+Node ID: 5
+ -> Node ID: 0
+
+Total remaining nodes: 2
+
+################################################################
+suhkth@muhummed ~/D/I/Assignment 2: Threads, Scheduling, Synchronization (main)> ./pthread_stack 4
+Number of threads: 4
+Starting Mutex version
+Thread 0 starting
+Thread 1 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Pushed node 3
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 1: exit
+Thread 2 starting
+Pushed node 6
+Pushed node 7
+Popped node 7
+Popped node 6
+Pushed node 8
+Thread 2: exit
+Thread 3 starting
+Pushed node 9
+Pushed node 10
+Popped node 10
+Popped node 9
+Pushed node 11
+Thread 3: exit
+Mutex: Remaining nodes 
+Mutex: Remaining nodes in stack:
+Node ID: 11
+ -> Node ID: 8
+ -> Node ID: 5
+ -> Node ID: 2
+
+Total remaining nodes: 4
+Starting CAS version
+Thread 0 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Thread 1 starting
+Pushed node 3
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 1: exit
+Thread 2 starting
+Pushed node 6
+Pushed node 7
+Popped node 7
+Popped node 6
+Pushed node 8
+Thread 2: exit
+Thread 3 starting
+Pushed node 9
+Pushed node 10
+Popped node 10
+Popped node 9
+Pushed node 11
+Thread 3: exit
+CAS: Remaining nodes 
+CAS: Remaining nodes in stack:
+Node ID: 11
+ -> Node ID: 8
+ -> Node ID: 5
+ -> Node ID: 2
+
+Total remaining nodes: 4
+
+################################################################
+suhkth@muhummed ~/D/I/Assignment 2: Threads, Scheduling, Synchronization (main)> ./pthread_stack 8
+Number of threads: 8
+Starting Mutex version
+Thread 0 starting
+Thread 1 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Thread 2 starting
+Pushed node 3
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 1: exit
+Pushed node 6
+Pushed node 7
+Popped node 7
+Popped node 6
+Pushed node 8
+Thread 2: exit
+Thread 3 starting
+Pushed node 9
+Pushed node 10
+Popped node 10
+Popped node 9
+Pushed node 11
+Thread 3: exit
+Thread 4 starting
+Pushed node 12
+Pushed node 13
+Popped node 13
+Popped node 12
+Pushed node 14
+Thread 4: exit
+Thread 5 starting
+Pushed node 15
+Pushed node 16
+Popped node 16
+Popped node 15
+Pushed node 17
+Thread 5: exit
+Thread 6 starting
+Pushed node 18
+Pushed node 19
+Popped node 19
+Popped node 18
+Pushed node 20
+Thread 6: exit
+Thread 7 starting
+Pushed node 21
+Pushed node 22
+Popped node 22
+Popped node 21
+Pushed node 23
+Thread 7: exit
+Mutex: Remaining nodes 
+Mutex: Remaining nodes in stack:
+Node ID: 23
+ -> Node ID: 20
+ -> Node ID: 17
+ -> Node ID: 14
+ -> Node ID: 11
+ -> Node ID: 8
+ -> Node ID: 5
+ -> Node ID: 2
+
+Total remaining nodes: 8
+Starting CAS version
+Thread 0 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Thread 1 starting
+Pushed node 3
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 1: exit
+Thread 2 starting
+Pushed node 6
+Pushed node 7
+Popped node 7
+Thread 3 starting
+Pushed node 8
+Pushed node 9
+Popped node 9
+Popped node 8
+Pushed node 10
+Thread 3: exit
+Thread 4 starting
+Pushed node 11
+Pushed node 12
+Popped node 12
+Popped node 11
+Pushed node 13
+Thread 4: exit
+Popped node 6
+Pushed node 14
+Thread 2: exit
+Thread 5 starting
+Pushed node 15
+Pushed node 16
+Popped node 16
+Popped node 15
+Pushed node 17
+Thread 5: exit
+Thread 6 starting
+Pushed node 18
+Pushed node 19
+Popped node 19
+Popped node 18
+Pushed node 20
+Thread 6: exit
+Thread 7 starting
+Pushed node 21
+Pushed node 22
+Popped node 22
+Popped node 21
+Pushed node 23
+Thread 7: exit
+CAS: Remaining nodes 
+CAS: Remaining nodes in stack:
+Node ID: 23
+ -> Node ID: 20
+ -> Node ID: 17
+ -> Node ID: 14
+ -> Node ID: 13
+ -> Node ID: 10
+ -> Node ID: 5
+ -> Node ID: 2
+
+Total remaining nodes: 8
+
+################################################################
+suhkth@muhummed ~/D/I/Assignment 2: Threads, Scheduling, Synchronization (main)> ./pthread_stack 16
+Number of threads: 16
+Starting Mutex version
+Thread 0 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Thread 1 starting
+Pushed node 3
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 1: exit
+Thread 2 starting
+Pushed node 6
+Pushed node 7
+Popped node 7
+Popped node 6
+Pushed node 8
+Thread 2: exit
+Thread 3 starting
+Pushed node 9
+Pushed node 10
+Popped node 10
+Popped node 9
+Pushed node 11
+Thread 3: exit
+Thread 4 starting
+Pushed node 12
+Pushed node 13
+Popped node 13
+Popped node 12
+Pushed node 14
+Thread 4: exit
+Thread 5 starting
+Pushed node 15
+Pushed node 16
+Popped node 16
+Popped node 15
+Pushed node 17
+Thread 5: exit
+Thread 6 starting
+Pushed node 18
+Pushed node 19
+Popped node 19
+Popped node 18
+Pushed node 20
+Thread 6: exit
+Thread 7 starting
+Pushed node 21
+Pushed node 22
+Popped node 22
+Popped node 21
+Pushed node 23
+Thread 7: exit
+Thread 8 starting
+Pushed node 24
+Pushed node 25
+Popped node 25
+Popped node 24
+Pushed node 26
+Thread 8: exit
+Thread 9 starting
+Pushed node 27
+Pushed node 28
+Popped node 28
+Popped node 27
+Pushed node 29
+Thread 9: exit
+Thread 10 starting
+Pushed node 30
+Pushed node 31
+Popped node 31
+Popped node 30
+Pushed node 32
+Thread 10: exit
+Thread 11 starting
+Pushed node 33
+Pushed node 34
+Popped node 34
+Popped node 33
+Pushed node 35
+Thread 11: exit
+Thread 12 starting
+Pushed node 36
+Pushed node 37
+Popped node 37
+Popped node 36
+Pushed node 38
+Thread 12: exit
+Thread 13 starting
+Pushed node 39
+Pushed node 40
+Popped node 40
+Popped node 39
+Pushed node 41
+Thread 13: exit
+Thread 14 starting
+Pushed node 42
+Pushed node 43
+Popped node 43
+Popped node 42
+Pushed node 44
+Thread 14: exit
+Thread 15 starting
+Pushed node 45
+Pushed node 46
+Popped node 46
+Popped node 45
+Pushed node 47
+Thread 15: exit
+Mutex: Remaining nodes 
+Mutex: Remaining nodes in stack:
+Node ID: 47
+ -> Node ID: 44
+ -> Node ID: 41
+ -> Node ID: 38
+ -> Node ID: 35
+ -> Node ID: 32
+ -> Node ID: 29
+ -> Node ID: 26
+ -> Node ID: 23
+ -> Node ID: 20
+ -> Node ID: 17
+ -> Node ID: 14
+ -> Node ID: 11
+ -> Node ID: 8
+ -> Node ID: 5
+ -> Node ID: 2
+
+Total remaining nodes: 16
+Starting CAS version
+Thread 0 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Thread 1 starting
+Pushed node 3
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 1: exit
+Thread 2 starting
+Thread 3 starting
+Pushed node 7
+Pushed node 8
+Popped node 8
+Popped node 7
+Pushed node 9
+Thread 3: exit
+Pushed node 6
+Pushed node 10
+Popped node 10
+Popped node 9
+Pushed node 11
+Thread 2: exit
+Thread 4 starting
+Pushed node 12
+Pushed node 13
+Popped node 13
+Popped node 12
+Pushed node 14
+Thread 4: exit
+Thread 5 starting
+Pushed node 15
+Pushed node 16
+Popped node 16
+Popped node 15
+Pushed node 17
+Thread 6 starting
+Pushed node 18
+Pushed node 19
+Thread 5: exit
+Popped node 19
+Popped node 18
+Pushed node 20
+Thread 6: exit
+Thread 7 starting
+Pushed node 21
+Pushed node 22
+Popped node 22
+Popped node 21
+Pushed node 23
+Thread 7: exit
+Thread 8 starting
+Pushed node 24
+Pushed node 25
+Popped node 25
+Popped node 24
+Pushed node 26
+Thread 8: exit
+Thread 9 starting
+Pushed node 27
+Pushed node 28
+Popped node 28
+Popped node 27
+Pushed node 29
+Thread 9: exit
+Thread 10 starting
+Pushed node 30
+Pushed node 31
+Popped node 31
+Popped node 30
+Pushed node 32
+Thread 10: exit
+Thread 11 starting
+Pushed node 33
+Pushed node 34
+Popped node 34
+Popped node 33
+Pushed node 35
+Thread 11: exit
+Thread 12 starting
+Pushed node 36
+Pushed node 37
+Popped node 37
+Popped node 36
+Pushed node 38
+Thread 13 starting
+Pushed node 39
+Pushed node 40
+Popped node 40
+Popped node 39
+Pushed node 41
+Thread 13: exit
+Thread 12: exit
+Thread 14 starting
+Pushed node 42
+Pushed node 43
+Popped node 43
+Popped node 42
+Pushed node 44
+Thread 14: exit
+Thread 15 starting
+Pushed node 45
+Pushed node 46
+Popped node 46
+Popped node 45
+Pushed node 47
+Thread 15: exit
+CAS: Remaining nodes 
+CAS: Remaining nodes in stack:
+Node ID: 47
+ -> Node ID: 44
+ -> Node ID: 41
+ -> Node ID: 38
+ -> Node ID: 35
+ -> Node ID: 32
+ -> Node ID: 29
+ -> Node ID: 26
+ -> Node ID: 23
+ -> Node ID: 20
+ -> Node ID: 17
+ -> Node ID: 14
+ -> Node ID: 11
+ -> Node ID: 6
+ -> Node ID: 5
+ -> Node ID: 2
+
+Total remaining nodes: 16
+
+################################################################
+suhkth@muhummed ~/D/I/Assignment 2: Threads, Scheduling, Synchronization (main)> ./pthread_stack 32
+Number of threads: 32
+Starting Mutex version
+Thread 0 starting
+Thread 1 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Pushed node 3
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 1: exit
+Thread 2 starting
+Pushed node 6
+Pushed node 7
+Popped node 7
+Popped node 6
+Pushed node 8
+Thread 2: exit
+Thread 3 starting
+Pushed node 9
+Pushed node 10
+Popped node 10
+Popped node 9
+Pushed node 11
+Thread 3: exit
+Thread 4 starting
+Pushed node 12
+Pushed node 13
+Popped node 13
+Popped node 12
+Pushed node 14
+Thread 4: exit
+Thread 5 starting
+Pushed node 15
+Pushed node 16
+Popped node 16
+Popped node 15
+Pushed node 17
+Thread 5: exit
+Thread 7 starting
+Pushed node 18
+Pushed node 19
+Popped node 19
+Popped node 18
+Pushed node 20
+Thread 7: exit
+Thread 11 starting
+Pushed node 21
+Pushed node 22
+Popped node 22
+Popped node 21
+Pushed node 23
+Thread 11: exit
+Thread 6 starting
+Pushed node 24
+Pushed node 25
+Popped node 25
+Popped node 24
+Pushed node 26
+Thread 6: exit
+Thread 12 starting
+Pushed node 27
+Pushed node 28
+Popped node 28
+Popped node 27
+Pushed node 29
+Thread 12: exit
+Thread 13 starting
+Pushed node 30
+Pushed node 31
+Popped node 31
+Popped node 30
+Pushed node 32
+Thread 13: exit
+Thread 10 starting
+Pushed node 33
+Pushed node 34
+Popped node 34
+Popped node 33
+Pushed node 35
+Thread 10: exit
+Thread 14 starting
+Pushed node 36
+Pushed node 37
+Popped node 37
+Popped node 36
+Pushed node 38
+Thread 14: exit
+Thread 8 starting
+Pushed node 39
+Pushed node 40
+Popped node 40
+Popped node 39
+Pushed node 41
+Thread 8: exit
+Thread 9 starting
+Pushed node 42
+Pushed node 43
+Popped node 43
+Popped node 42
+Pushed node 44
+Thread 9: exit
+Thread 15 starting
+Pushed node 45
+Pushed node 46
+Popped node 46
+Popped node 45
+Pushed node 47
+Thread 15: exit
+Thread 16 starting
+Pushed node 48
+Pushed node 49
+Popped node 49
+Popped node 48
+Pushed node 50
+Thread 16: exit
+Thread 17 starting
+Pushed node 51
+Pushed node 52
+Popped node 52
+Popped node 51
+Pushed node 53
+Thread 17: exit
+Thread 18 starting
+Pushed node 54
+Pushed node 55
+Popped node 55
+Popped node 54
+Pushed node 56
+Thread 18: exit
+Thread 19 starting
+Pushed node 57
+Pushed node 58
+Popped node 58
+Popped node 57
+Pushed node 59
+Thread 19: exit
+Thread 20 starting
+Pushed node 60
+Pushed node 61
+Popped node 61
+Popped node 60
+Pushed node 62
+Thread 20: exit
+Thread 21 starting
+Pushed node 63
+Pushed node 64
+Popped node 64
+Popped node 63
+Pushed node 65
+Thread 21: exit
+Thread 22 starting
+Pushed node 66
+Pushed node 67
+Popped node 67
+Popped node 66
+Pushed node 68
+Thread 22: exit
+Thread 23 starting
+Pushed node 69
+Pushed node 70
+Popped node 70
+Popped node 69
+Pushed node 71
+Thread 23: exit
+Thread 24 starting
+Pushed node 72
+Pushed node 73
+Popped node 73
+Popped node 72
+Pushed node 74
+Thread 24: exit
+Thread 26 starting
+Pushed node 75
+Pushed node 76
+Popped node 76
+Popped node 75
+Pushed node 77
+Thread 26: exit
+Thread 25 starting
+Pushed node 78
+Pushed node 79
+Popped node 79
+Popped node 78
+Pushed node 80
+Thread 25: exit
+Thread 28 starting
+Pushed node 81
+Pushed node 82
+Popped node 82
+Thread 27 starting
+Pushed node 83
+Pushed node 84
+Popped node 84
+Popped node 83
+Pushed node 85
+Thread 27: exit
+Popped node 81
+Pushed node 86
+Thread 28: exit
+Thread 29 starting
+Pushed node 87
+Pushed node 88
+Popped node 88
+Popped node 87
+Pushed node 89
+Thread 29: exit
+Thread 30 starting
+Pushed node 90
+Pushed node 91
+Popped node 91
+Popped node 90
+Pushed node 92
+Thread 30: exit
+Thread 31 starting
+Pushed node 93
+Pushed node 94
+Popped node 94
+Popped node 93
+Pushed node 95
+Thread 31: exit
+Mutex: Remaining nodes 
+Mutex: Remaining nodes in stack:
+Node ID: 95
+ -> Node ID: 92
+ -> Node ID: 89
+ -> Node ID: 86
+ -> Node ID: 85
+ -> Node ID: 80
+ -> Node ID: 77
+ -> Node ID: 74
+ -> Node ID: 71
+ -> Node ID: 68
+ -> Node ID: 65
+ -> Node ID: 62
+ -> Node ID: 59
+ -> Node ID: 56
+ -> Node ID: 53
+ -> Node ID: 50
+ -> Node ID: 47
+ -> Node ID: 44
+ -> Node ID: 41
+ -> Node ID: 38
+ -> Node ID: 35
+ -> Node ID: 32
+ -> Node ID: 29
+ -> Node ID: 26
+ -> Node ID: 23
+ -> Node ID: 20
+ -> Node ID: 17
+ -> Node ID: 14
+ -> Node ID: 11
+ -> Node ID: 8
+ -> Node ID: 5
+ -> Node ID: 2
+
+Total remaining nodes: 32
+Starting CAS version
+Thread 0 starting
+Pushed node 0
+Pushed node 1
+Popped node 1
+Popped node 0
+Pushed node 2
+Thread 0: exit
+Thread 1 starting
+Pushed node 3
+Pushed node 4
+Popped node 4
+Popped node 3
+Pushed node 5
+Thread 1: exit
+Thread 2 starting
+Pushed node 6
+Pushed node 7
+Popped node 7
+Popped node 6
+Pushed node 8
+Thread 3 starting
+Pushed node 9
+Pushed node 10
+Popped node 10
+Popped node 9
+Pushed node 11
+Thread 3: exit
+Thread 2: exit
+Thread 5 starting
+Pushed node 12
+Pushed node 13
+Popped node 13
+Popped node 12
+Pushed node 14
+Thread 5: exit
+Thread 4 starting
+Pushed node 15
+Pushed node 16
+Thread 6 starting
+Pushed node 17
+Pushed node 18
+Popped node 18
+Popped node 17
+Pushed node 19
+Thread 6: exit
+Popped node 16
+Popped node 19
+Pushed node 20
+Thread 4: exit
+Thread 7 starting
+Pushed node 21
+Pushed node 22
+Popped node 22
+Popped node 21
+Pushed node 23
+Thread 7: exit
+Thread 8 starting
+Pushed node 24
+Pushed node 25
+Popped node 25
+Popped node 24
+Pushed node 26
+Thread 8: exit
+Thread 9 starting
+Pushed node 27
+Pushed node 28
+Popped node 28
+Popped node 27
+Pushed node 29
+Thread 9: exit
+Thread 10 starting
+Pushed node 30
+Pushed node 31
+Popped node 31
+Popped node 30
+Pushed node 32
+Thread 10: exit
+Thread 11 starting
+Pushed node 33
+Pushed node 34
+Popped node 34
+Popped node 33
+Pushed node 35
+Thread 11: exit
+Thread 12 starting
+Pushed node 36
+Pushed node 37
+Popped node 37
+Popped node 36
+Pushed node 38
+Thread 12: exit
+Thread 13 starting
+Pushed node 39
+Pushed node 40
+Popped node 40
+Popped node 39
+Pushed node 41
+Thread 13: exit
+Thread 14 starting
+Pushed node 42
+Pushed node 43
+Popped node 43
+Popped node 42
+Pushed node 44
+Thread 14: exit
+Thread 15 starting
+Pushed node 45
+Pushed node 46
+Popped node 46
+Popped node 45
+Pushed node 47
+Thread 15: exit
+Thread 16 starting
+Pushed node 48
+Pushed node 49
+Popped node 49
+Popped node 48
+Pushed node 50
+Thread 16: exit
+Thread 17 starting
+Pushed node 51
+Pushed node 52
+Popped node 52
+Popped node 51
+Pushed node 53
+Thread 17: exit
+Thread 18 starting
+Pushed node 54
+Pushed node 55
+Popped node 55
+Popped node 54
+Pushed node 56
+Thread 18: exit
+Thread 19 starting
+Pushed node 57
+Pushed node 58
+Popped node 58
+Popped node 57
+Pushed node 59
+Thread 19: exit
+Thread 20 starting
+Pushed node 60
+Pushed node 61
+Popped node 61
+Popped node 60
+Pushed node 62
+Thread 20: exit
+Thread 21 starting
+Pushed node 63
+Pushed node 64
+Popped node 64
+Popped node 63
+Pushed node 65
+Thread 21: exit
+Thread 22 starting
+Thread 23 starting
+Pushed node 67
+Pushed node 68
+Popped node 68
+Popped node 67
+Pushed node 69
+Thread 23: exit
+Pushed node 66
+Pushed node 70
+Popped node 70
+Popped node 69
+Pushed node 71
+Thread 22: exit
+Thread 24 starting
+Pushed node 72
+Pushed node 73
+Popped node 73
+Popped node 72
+Pushed node 74
+Thread 24: exit
+Thread 25 starting
+Pushed node 75
+Pushed node 76
+Popped node 76
+Popped node 75
+Pushed node 77
+Thread 25: exit
+Thread 26 starting
+Pushed node 78
+Pushed node 79
+Popped node 79
+Popped node 78
+Pushed node 80
+Thread 26: exit
+Thread 27 starting
+Pushed node 81
+Pushed node 82
+Popped node 82
+Popped node 81
+Pushed node 83
+Thread 27: exit
+Thread 28 starting
+Pushed node 84
+Pushed node 85
+Popped node 85
+Popped node 84
+Pushed node 86
+Thread 28: exit
+Thread 29 starting
+Pushed node 87
+Pushed node 88
+Popped node 88
+Popped node 87
+Pushed node 89
+Thread 29: exit
+Thread 30 starting
+Pushed node 90
+Pushed node 91
+Popped node 91
+Popped node 90
+Pushed node 92
+Thread 30: exit
+Thread 31 starting
+Pushed node 93
+Pushed node 94
+Popped node 94
+Popped node 93
+Pushed node 95
+Thread 31: exit
+CAS: Remaining nodes 
+CAS: Remaining nodes in stack:
+Node ID: 95
+ -> Node ID: 92
+ -> Node ID: 89
+ -> Node ID: 86
+ -> Node ID: 83
+ -> Node ID: 80
+ -> Node ID: 77
+ -> Node ID: 74
+ -> Node ID: 71
+ -> Node ID: 66
+ -> Node ID: 65
+ -> Node ID: 62
+ -> Node ID: 59
+ -> Node ID: 56
+ -> Node ID: 53
+ -> Node ID: 50
+ -> Node ID: 47
+ -> Node ID: 44
+ -> Node ID: 41
+ -> Node ID: 38
+ -> Node ID: 35
+ -> Node ID: 32
+ -> Node ID: 29
+ -> Node ID: 26
+ -> Node ID: 23
+ -> Node ID: 20
+ -> Node ID: 15
+ -> Node ID: 14
+ -> Node ID: 11
+ -> Node ID: 8
+ -> Node ID: 5
+ -> Node ID: 2
+
+Total remaining nodes: 32
