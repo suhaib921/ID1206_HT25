@@ -5,16 +5,16 @@
 #include <stdatomic.h>
      
 int num_threads = 0;
-int node_id_counter = 0; //global counter for node IDs
+int node_id_counter = 0; 
 pthread_mutex_t counter_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t stack_mutex = PTHREAD_MUTEX_INITIALIZER;
      
 typedef struct node { 
-     int node_id;      //a unique ID assigned to each node
+     int node_id;      
      struct node *next;
 } Node;
 
-Node *top; // top of stack
+Node *top; 
 
 //Generate unique node ID
 int get_next_node_id() {
@@ -214,7 +214,6 @@ int main(int argc, char *argv[])
      print_remaining_nodes("CAS");
 
      
-     /*free up resources properly */
      free(workers);
      free(thread_args);
      free_stack();

@@ -204,7 +204,6 @@ int main(int argc, char *argv[]) {
     // Run parallel histogram
     parallel_histogram();
     
-    // Free memory
     free(array);
     free(global_histogram);
     for (int i = 0; i < num_threads; i++) {
@@ -212,7 +211,7 @@ int main(int argc, char *argv[]) {
     }
     free(local_histograms);
 
-    double total_end = get_time();   // <-- End overall timer
+    double total_end = get_time();   // End overall timer
     printf("Total program time: %.6f seconds\n", total_end - total_start);
 
     

@@ -130,7 +130,6 @@ int main(int argc, char *argv[])
                    (end_parallel.tv_usec - start_parallel.tv_usec) / 1000000.0;
      printf("Parallel Sum = %f, time = %.6f \n", sum_parallel, time_parallel);
      
-     /*free up resources properly */
      free(array);
      free(workers);
      free(thread_data);
