@@ -1,0 +1,13 @@
+Question 6: meminfo
+This is a programming assignment in C. You will create a simple C program that allocates N pages
+of system-specific page sizes in main memory using malloc(), where N is set by the user.
+
+1) Modify your program so that it uses the system-specific page sizes when calculating the size of memory allocation.
+Hint: the program shall uses the system call getpagesize().
+2) Run your program with the timer command like “$ /usr/bin/time --verbose ./my_allocator 128”. You should report 
+the screenshot of the output here. What is your page size? What is the ‘Maximum resident set size’? 
+Describe in your own words the definition of Resident Set Size.
+3) Further modify your program so that the memory allocation is initialized. 
+Hint: you can initialize the whole allocation by memset().
+4) Run your program again with the timer command like in (a). You should report the screenshot of the output here. 
+What is the ‘Maximum resident set size’ now? Explain why or why not it is different from (b).

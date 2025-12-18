@@ -1,0 +1,16 @@
+This is a programming assignment in C. You will create a simple C program that mimics the active and inactive lists in Linux kernel. The program initially generates a random page-reference string of 1000 accesses, where page numbers range from 0 to N. N is set by the user from argv[1]. The program maintains two linked list of struct Page, for active and inactive lists, respectively. The struct Page has a reference bit, page id, and other auxiliary members.
+
+Your program should create one pthread called player will play the generated reference string. For each page in the reference string, the player will set the reference bit to 1, move the page to the rear end of the active list, and sleep for 10 microseconds. When the size of active list is over 70% N, it will move about 20% pages at the front end of the active list to inactive list.
+
+Another pthread called checker wakes up periodically after sleeping for M microseconds. M is set by the user from argv[2]. When it is up, it goes through all pages in the active list and reset their reference bit to 0. It also collects statistics of page references: for each page, it accumulates the number of times its reference bit is 1.
+
+The program reports the final page statistics collected by checker in a screenshot. Report the pages in active and inactive list, respectively, in screenshot. An example output should look like this
+
+/home/suhkth/Desktop/ID1206_HT25/Assignment 3: Memory Management/Q8.png
+
+1) You may use the skeleton code here Download here. Feel free to modify the code to suit your purpose.
+Describe your design.
+2) Run your program with N: 64, M: 20. Report your output in screenshot.
+3) Run your program with N: 64, M: 200. Report your output in screenshot.
+4) Run your program with N: 64, M: 2000. Report your output in screenshot.
+5) Explain in your own words the observation from 3-5.

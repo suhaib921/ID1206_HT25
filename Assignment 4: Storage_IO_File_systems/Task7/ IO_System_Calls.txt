@@ -1,0 +1,21 @@
+Question 7: I/O System Calls
+
+You will create a simple C program that uses multiple threads to read or write from a file.
+You are free to modify the code skeleton Download code skeleton. The program initially allocates
+a memory buffer of N bytes, where N is set by the user from argv[1]. Initialize the buffer with some values.
+The program then creates a file to store the values.
+
+Your program should create P threads using pthread_create(), where P is set by the user from argv[2].
+Each thread will write a portion from the buffer to the file. You will decide how to split the list of
+requests among threads. Add timers so that you can calculate write bandwidth = Bytes_Written / Elapsed_Time.
+
+Next, the program should re-open the file. Now use P threads to read a portion from the file.
+Add timers so that you can calculate read bandwidth. An example output is shown below
+
+/home/suhkth/Desktop/ID1206_HT25/Assignment 4: Storage_IO_File_systems/Task7/image.png
+
+1) Run your program with N: 16000000, P: 1. Report your output in screenshot.
+2) Run your program with N: 16000000, P: 2. Report your output in screenshot.
+3) Run your program with N: 16000000, P: 4. Report your output in screenshot.
+4) Run your program with N: 160000000, P: 2. Report your output in screenshot.
+5) What are your main observations from a-d, and explanation for the observations?

@@ -1,0 +1,94 @@
+=== Test 1: N=4096 with Huge Pages ===
+Allocating 4096 pages of 4096 bytes
+Using Option 2: Huge pages
+Successfully allocated memory using huge pages
+Elapsed time: 0.004407 seconds
+Elapsed cycles: 4407
+a b c d e f g h i j k l m n o p 
+	Command being timed: "./hw3_q7_mmap_faults 4096 2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1604
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 83
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+
+=== Test 2: N=8192 with Huge Pages ===
+Allocating 8192 pages of 4096 bytes
+Using Option 2: Huge pages
+Successfully allocated memory using huge pages
+Elapsed time: 0.007973 seconds
+Elapsed cycles: 7973
+a b c d e f g h i j k l m n o p 
+	Command being timed: "./hw3_q7_mmap_faults 8192 2"
+	User time (seconds): 0.00
+	System time (seconds): 0.01
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1604
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 92
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+
+=== Test 3: N=16384 with Huge Pages ===
+Allocating 16384 pages of 4096 bytes
+Using Option 2: Huge pages
+Successfully allocated memory using huge pages
+Elapsed time: 0.015978 seconds
+Elapsed cycles: 15978
+a b c d e f g h i j k l m n o p 
+	Command being timed: "./hw3_q7_mmap_faults 16384 2"
+	User time (seconds): 0.00
+	System time (seconds): 0.01
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1604
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 107
+	Voluntary context switches: 1
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

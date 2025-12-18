@@ -1,0 +1,15 @@
+Question 7: Page Faults
+This is a programming assignment in C. You will create a simple C program that creates new mapping in 
+the virtual address space for N pages backed by anonymous pages by using mmap(). N is set by the user.
+
+For mmap(), you will experiment 2 options: (1) normal pages and (2) huge pages. You then will use the perf tool in Linux for profiling of page faults. 
+Alternatively, use the same /usr/bin/time in question 6 to find out major and minor page faults. An example output is shown below.
+
+/home/suhkth/Desktop/ID1206_HT25/Assignment 3: Memory Management/Q7.png
+
+
+1) You may modify the attached skeleton code here Download here, and update the code.
+2) Run your program with Option 1, using the following values for N: 4096, 8192, 16384. Report the output in a screenshot.
+3) Run your program with Option 2, using the following values for N: 4096, 8192, 16384. Report the output in a screenshot.
+4) Explain the difference in the number of page faults and the printed elapsed time from using Options 1 and 2 for N=16384. 
+5) Explain the observation in your own words.

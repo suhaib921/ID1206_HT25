@@ -1,0 +1,16 @@
+Question 6: File Directories
+Acyclic-graph directories support files to be shared. Soft and Hard links can be used.
+In this experiment, first, create a new file called file_original.txt with random text. 
+Answer the following questions:
+
+(a) Specify the command did you use to create a soft link that creates a new file called ‘file_soft.txt’ pointing to ‘file_original.txt’.
+(b) Specify the command that can be used to find the inode number of a file. Are the inodes the same for ‘file_soft.txt’ and ‘file_origin.txt’ in your experiment, and why? You can report screenshots.
+(c) Now edit the contents of ‘file_soft.txt’. Have the contents of ‘file_origin.txt’ been altered as well? Explain your observation.
+(d) Delete ‘file_origin.txt’ with command ‘rm’. Can you still edit ‘file_soft.txt’? Explain your observation.
+
+Now, create ‘file_origin2.txt’ with random text. Answer the following questions.
+(e) Specify the command did you use to create a hard link that creates a new file called ‘file_hard.txt’ pointing to ‘file_origin2.txt’.
+(f) Are the inodes the same for ‘file_hard.txt’ and ‘file_origin2.txt’, and why? You can report screenshots.
+(g) Edit the contents of ‘file_hard.txt’. Have the contents of ‘file_origin2.txt’ been altered as well? Are the inodes 
+for ‘file_hard.txt’ and ‘file_origin2.txt’ still the same? Explain your observation.
+(h) Delete ‘file_origin2.txt’ with command ‘rm’. Can you still edit ‘file_hard.txt’? Explain why.

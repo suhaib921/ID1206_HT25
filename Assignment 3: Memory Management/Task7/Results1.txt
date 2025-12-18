@@ -1,0 +1,90 @@
+suhkth@muhummed:~/Desktop/ID1206_HT25/Assignment 3: Memory Management/Task7$ /usr/bin/time -v ./hw3_q7_mmap_faults 4096 1
+Allocating 4096 pages of 4096 bytes
+Using Option 1: Normal pages
+Successfully allocated memory using normal pages
+Elapsed time: 0.014028 seconds
+Elapsed cycles: 14028
+a b c d e f g h i j k l m n o p 
+        Command being timed: "./hw3_q7_mmap_faults 4096 1"
+        User time (seconds): 0.00
+        System time (seconds): 0.01
+        Percent of CPU this job got: 88%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.01
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 17896
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 4172
+        Voluntary context switches: 1
+        Involuntary context switches: 0
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
+suhkth@muhummed:~/Desktop/ID1206_HT25/Assignment 3: Memory Management/Task7$ /usr/bin/time -v ./hw3_q7_mmap_faults 81292 1
+Allocating 81292 pages of 4096 bytes
+Using Option 1: Normal pages
+Successfully allocated memory using normal pages
+Elapsed time: 0.129395 seconds
+Elapsed cycles: 129395
+a b c d e f g h i j k l m n o p 
+        Command being timed: "./hw3_q7_mmap_faults 81292 1"
+        User time (seconds): 0.01
+        System time (seconds): 0.14
+        Percent of CPU this job got: 99%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.15
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 326760
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 81366
+        Voluntary context switches: 1
+        Involuntary context switches: 1
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
+suhkth@muhummed:~/Desktop/ID1206_HT25/Assignment 3: Memory Management/Task7$ /usr/bin/time -v ./hw3_q7_mmap_faults 16384 1
+Allocating 16384 pages of 4096 bytes
+Using Option 1: Normal pages
+Successfully allocated memory using normal pages
+Elapsed time: 0.047867 seconds
+Elapsed cycles: 47867
+a b c d e f g h i j k l m n o p 
+        Command being timed: "./hw3_q7_mmap_faults 16384 1"
+        User time (seconds): 0.00
+        System time (seconds): 0.05
+        Percent of CPU this job got: 98%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.05
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 67048
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 16459
+        Voluntary context switches: 1
+        Involuntary context switches: 1
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
